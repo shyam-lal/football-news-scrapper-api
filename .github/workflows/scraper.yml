@@ -87,7 +87,7 @@ jobs:
       
       - name: Upload Debug Artifacts
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: debug-files
           path: |
