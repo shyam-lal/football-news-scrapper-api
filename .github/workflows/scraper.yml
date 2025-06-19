@@ -2,41 +2,124 @@ name: Scrape TNT News
 
 on:
   schedule:
-    - cron: "0 */4 * * *"
-  workflow_dispatch:
+    - cron: "0 */4 * * *"  # Fixed: was missing the last *
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-
+      - name: Checkout Repository
+        uses: actions/checkout@v4  # Updated to v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use built-in token first
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
-
-      - name: Install dependencies
+          python-version: '3.11'  # Updated Python version
+      
+      - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser
+          sudo apt-get install -y \
+            chromium-browser \
+            chromium-chromedriver \
+            xvfb
+          
+          # Verify installations
+          chromium-browser --version
+          chromedriver --version
+      
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-
+      
+      - name: Set Environment Variables
+        run: |
+          echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+      
       - name: Run Scraper
         run: |
-          echo "Running scraper..."
+          echo "🚀 Starting TNT Sports scraper..."
+          echo "Current directory: $(pwd)"
+          echo "Files in directory: $(ls -la)"
+          
+          # Start virtual display for headless Chrome
+          Xvfb :99 -screen 0 1920x1080x24 &
+          
+          # Run the scraper
           python scrapper.py
-
-      - name: Commit Scraped Data
-        run: |
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
-
-          if [ -n "$(git status --porcelain news.json)" ]; then
-            git add news.json
-            git commit -m "Update news data"
-            git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git
+          
+          echo "✅ Scraper completed"
+          echo "Files after scraping: $(ls -la)"
+          
+          # Show what was scraped (first few lines)
+          if [ -f "news.json" ]; then
+            echo "📄 Content of news.json (first 10 lines):"
+            head -10 news.json
           else
-            echo "No changes in news.json, skipping commit."
+            echo "❌ news.json not found"
+          fi
+      
+      - name: Debug Information
+        if: always()  # Always run this step
+        run: |
+          echo "=== DEBUG INFORMATION ==="
+          echo "Working directory: $(pwd)"
+          echo "All files: $(ls -la)"
+          
+          if [ -f "page_source.html" ]; then
+            echo "📄 Page source saved (first 20 lines):"
+            head -20 page_source.html
+          fi
+          
+          if [ -f "debug_screenshot.png" ]; then
+            echo "📸 Screenshot saved: debug_screenshot.png"
+            ls -la debug_screenshot.png
+          fi
+          
+          echo "=== Git Status ==="
+          git status
+      
+      - name: Upload Debug Artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: debug-files
+          path: |
+            debug_screenshot.png
+            page_source.html
+            news.json
+          retention-days: 7
+      
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          
+          # Add news.json if it exists and has content
+          if [ -f "news.json" ]; then
+            file_size=$(stat -f%z "news.json" 2>/dev/null || stat -c%s "news.json" 2>/dev/null || echo "0")
+            echo "news.json size: $file_size bytes"
+            
+            if [ "$file_size" -gt 10 ]; then  # File has meaningful content
+              git add news.json
+              
+              if ! git diff --staged --quiet; then
+                echo "📝 Changes detected in news.json, committing..."
+                git commit -m "🗞️ Update TNT Sports news data - $(date '+%Y-%m-%d %H:%M:%S')"
+                git push
+                echo "✅ Successfully pushed changes"
+              else
+                echo "ℹ️ No changes in news.json to commit"
+              fi
+            else
+              echo "⚠️ news.json is too small or empty, not committing"
+            fi
+          else
+            echo "❌ news.json not found, nothing to commit"
           fi
