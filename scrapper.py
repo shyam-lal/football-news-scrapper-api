@@ -12,7 +12,7 @@ import sys
 TNT_NEWS_URL = "https://www.tntsports.co.uk/football/"
 
 def get_chrome_options():
-    """Configure Chrome options for GitHub Actions environment"""
+    """Configure Chrome options for GitHub Actions environment with geo-restriction bypass"""
     options = webdriver.ChromeOptions()
     
     # Essential headless options for CI/CD
@@ -22,10 +22,8 @@ def get_chrome_options():
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-extensions")
     options.add_argument("--disable-plugins")
-    options.add_argument("--disable-images")  # Speed up loading
-    options.add_argument("--disable-javascript")  # Only if site works without JS
     
-    # Anti-detection measures
+    # Anti-detection and geo-bypass measures
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
@@ -36,8 +34,17 @@ def get_chrome_options():
     # Set Chrome binary location for GitHub Actions
     options.binary_location = "/usr/bin/chromium-browser"
     
-    # Updated user-agent
-    options.add_argument("--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    # UK-based user agent to bypass geo-restrictions
+    options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    
+    # Additional headers to appear as UK-based browser
+    options.add_argument("--accept-language=en-GB,en;q=0.9")
+    
+    # Disable features that might reveal automation
+    options.add_argument("--disable-features=VizDisplayCompositor")
+    options.add_argument("--disable-background-timer-throttling")
+    options.add_argument("--disable-backgrounding-occluded-windows")
+    options.add_argument("--disable-renderer-backgrounding")
     
     # Memory and performance optimizations
     options.add_argument("--memory-pressure-off")
@@ -61,15 +68,40 @@ def scrape_tnt_news():
         driver = webdriver.Chrome(service=service, options=options)
         
         try:
+            # Set additional headers to bypass geo-restrictions
+            driver.execute_cdp_cmd('Network.setUserAgentOverride', {
+                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "acceptLanguage": "en-GB,en;q=0.9",
+                "platform": "Windows"
+            })
+            
+            # Set additional headers
+            driver.execute_cdp_cmd('Network.enable', {})
+            driver.execute_cdp_cmd('Network.setExtraHTTPHeaders', {
+                'headers': {
+                    'Accept-Language': 'en-GB,en;q=0.9',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'DNT': '1',
+                    'Connection': 'keep-alive'
+                }
+            })
+            
             # Execute script to avoid detection
             driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            driver.execute_script("Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]})")
+            driver.execute_script("Object.defineProperty(navigator, 'languages', {get: () => ['en-GB', 'en']})")
             
             print("Navigating to TNT Sports...")
             driver.get(TNT_NEWS_URL)
             
             # Wait longer for page to load
             print("Waiting for page to load...")
-            time.sleep(5)
+            time.sleep(8)  # Increased wait time
+            
+            # Check if we're being redirected or blocked
+            current_url = driver.current_url
+            print(f"Current URL after navigation: {current_url}")
             
             # Save page source for debugging
             with open("page_source.html", "w", encoding="utf-8") as f:
@@ -84,7 +116,36 @@ def scrape_tnt_news():
             page_title = driver.title
             print(f"Page title: {page_title}")
             
-            if "TNT Sports" not in page_title and "404" in page_title:
+            # Check for geo-blocking
+            if "not available in your region" in page_title.lower() or "not available in your region" in driver.page_source.lower():
+                print("❌ DETECTED: Website is geo-blocking this region")
+                print("Attempting alternative approach...")
+                
+                # Try to use a different endpoint or approach
+                alternative_urls = [
+                    "https://www.tntsports.co.uk/",
+                    "https://www.tntsports.co.uk/football/news",
+                    "https://www.tntsports.co.uk/football/premier-league"
+                ]
+                
+                for alt_url in alternative_urls:
+                    try:
+                        print(f"Trying alternative URL: {alt_url}")
+                        driver.get(alt_url)
+                        time.sleep(5)
+                        
+                        if "not available in your region" not in driver.page_source.lower():
+                            print(f"✅ Success with alternative URL: {alt_url}")
+                            break
+                    except Exception as e:
+                        print(f"Alternative URL failed: {e}")
+                        continue
+                else:
+                    print("❌ All alternative URLs failed - geo-blocking detected")
+                    print("You may need to use a VPN-enabled runner or different approach")
+                    return []
+            
+            if "404" in page_title or "error" in page_title.lower():
                 print("ERROR: Page may not have loaded correctly")
                 return []
             
