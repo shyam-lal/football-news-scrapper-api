@@ -172,8 +172,11 @@ def scrape_tnt_news():
             print(f"Items with images: {len([item for item in news if item['pic']])}")
             
             # return news
+            print(f"Scraped {len(news)} news items")
+
             with open("news.json", "w") as f:
-              json.dump(news, f, indent=2)
+                json.dump(news, f, indent=2)
+                print("Saved news.json")
             
     except TimeoutException:
         print("Timeout waiting for news elements.")
