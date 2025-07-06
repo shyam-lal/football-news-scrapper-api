@@ -1,9 +1,21 @@
 [
   {
     "league": "EURO",
-    "title": "France v England LIVE: Baltimore doubles the lead for the Bleues",
+    "title": "'We hold ourselves to higher standards' - Williamson downbeat over England Euro defeat",
+    "link": "https://www.tntsports.co.uk/football/euro/2025/leah-williamson-england-defeat-france_sto23199018/story.shtml",
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/05/image-fbeee4e0-fac5-4d34-a219-190cbaf52dfb-68-310-310.jpeg"
+  },
+  {
+    "league": "EURO",
+    "title": "England begin Euro title defence with loss to France",
     "link": "https://www.tntsports.co.uk/football/euro/2025/live-france-england_mtc1574267/live-commentary.shtml",
     "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/05/image-7ef5f7d3-10a4-4697-af16-cb77655dd867-68-310-310.jpeg"
+  },
+  {
+    "league": "CLUB WORLD CUP",
+    "title": "'It didn't look good' - Kompany expects bad news after Musiala stretchered off against PSG",
+    "link": "https://www.tntsports.co.uk/football/club-world-cup/2025/it-doesnt-look-good-bayern-munich-boss-vincent-kompany-expects-bad-news-after-jamal-musiala-stretchered-off-during-paris-saint-germain-defeat_sto23199002/story.shtml",
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/05/image-428729e0-ed8d-4a02-b2e4-5e9ec14a3899-68-310-310.jpeg"
   },
   {
     "league": "CLUB WORLD CUP",
@@ -12,20 +24,20 @@
     "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(jpeg):focal(309x311:311x309)/origin-imgresizer.tntsports.io/2025/07/05/image-f0ac137d-a109-4e0d-868e-d4ffc1306943-68-310-310.jpeg"
   },
   {
+    "league": "TRANSFERS",
+    "title": "Al Nassr make move for Arsenal target Rodrygo - Paper Round",
+    "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/arsenal-face-competition-for-real-madrid-forward-rodrygo-as-al-nassr-join-hunt-paper-round_sto23198987/story.shtml",
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg):focal(2559x1441:2561x1439)/origin-imgresizer.tntsports.io/2025/07/04/image-413595e3-dab3-4aba-ab2a-f0ec4c5acdfa-85-2560-1440.jpeg"
+  },
+  {
     "league": "EURO",
     "title": "Wales brushed aside by Netherlands in debut at major tournament",
     "link": "https://www.tntsports.co.uk/football/euro/2025/live-wales-netherlands_mtc1574266/live-commentary.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/05/image-24337a02-90b1-4ad9-8544-2cb6f7a869a2-68-310-310.jpeg"
-  },
-  {
-    "league": "EURO",
-    "title": "Lionesses preview: Russo for Ballon d'Or, Earps retirement and Tough Group",
-    "link": "https://www.tntsports.co.uk/football/euro/2025/england-lionesses-preview-karen-carney-fara-williams-alessia-russo-ballon-d-or-mary-earps-sarina-wiegman_sto23197745/story.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(png)/origin-imgresizer.tntsports.io/2025/07/02/image-a7539303-6f54-4649-9ffa-c68b47fdf3af-68-310-310.png"
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/05/image-24337a02-90b1-4ad9-8544-2cb6f7a869a2-85-2560-1440.jpeg"
   },
   {
     "league": "TRANSFERS 2025-2026",
-    "title": "Transfer News LIVE - Arsenal discuss terms with Madueke, Barca and Man Utd to open Rashford talks",
+    "title": "Transfer News recap - Arsenal discuss terms with Madueke, Barca and Man Utd to open Rashford talks",
     "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/liveevent.shtml",
     "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/05/image-e79d29bc-3c81-430a-8b00-63d9e2954e0f-85-2560-1440.jpeg"
   },
@@ -33,30 +45,18 @@
     "league": "BALLON D’OR",
     "title": "PSG president says Ballon d'Or has 'problem' if Dembele does not win award",
     "link": "https://www.tntsports.co.uk/football/ballon-d-or/2025/ousmane-dembele-paris-saint-germain-president-nasser-al-khelaifi_sto23198862/story.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg):focal(2559x1441:2561x1439)/origin-imgresizer.tntsports.io/2025/07/05/image-6b4a80bd-9266-46b6-9ae3-21ff017831d8-85-2560-1440.jpeg"
+    "pic": null
   },
   {
     "league": "BALLON D’OR",
     "title": "Chelsea new boy Estevao targeting Ballon d'Or",
     "link": "https://www.tntsports.co.uk/football/ballon-d-or/2025/my-second-biggest-dream-brazil-wonderkid-estevao-after-joining-chelsea_sto23198831/story.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg):focal(2559x1441:2561x1439)/origin-imgresizer.tntsports.io/2025/07/05/image-dde5a7d4-9459-4ab8-97eb-4654bcaafe3f-85-2560-1440.jpeg"
+    "pic": null
   },
   {
     "league": "CLUB WORLD CUP",
     "title": "Chelsea reach semi-finals despite Estevao goal against new club",
     "link": "https://www.tntsports.co.uk/football/club-world-cup/2025/chelsea-palmeiras-club-world-cup-semi-finals-estevao-willian-goal-new-club_sto23198718/story.shtml",
-    "pic": null
-  },
-  {
-    "league": "PREMIER LEAGUE",
-    "title": "Chelsea confirm Gittens signing from Dortmund",
-    "link": "https://www.tntsports.co.uk/football/premier-league/2025-2026/chelsea-sign-jamie-gittens-from-borussia-dortmund_sto23198833/story.shtml",
-    "pic": null
-  },
-  {
-    "league": "CLUB WORLD CUP",
-    "title": "Bellingham reacts to missing out on 'dream' match with brother Jobe",
-    "link": "https://www.tntsports.co.uk/football/club-world-cup/2025/bellingham-brothers-borussia-dortmund-real-madrid-fifa-club-world-cup-dream_sto23198774/story.shtml",
     "pic": null
   }
 ]
