@@ -1,9 +1,9 @@
 [
   {
     "league": "EURO",
-    "title": "Switzerland v Iceland LIVE - Both teams hunt first points",
+    "title": "Switzerland overcome Iceland with second-half double",
     "link": "https://www.tntsports.co.uk/football/euro/2025/live-switzerland-iceland_mtc1574246/live-commentary.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(jpeg):focal(309x311:311x309)/origin-imgresizer.tntsports.io/2025/07/06/image-8c2df576-21af-45d4-80fa-70e840cf0133-68-310-310.jpeg"
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x420/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/06/image-18ff93b6-2b27-4d3c-bb2e-2f058e11234a-68-310-310.jpeg"
   },
   {
     "league": "EURO",
@@ -30,6 +30,12 @@
     "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/06/image-33606bbb-b8f8-42f8-9128-330ad5283af5-85-2560-1440.jpeg"
   },
   {
+    "league": "TRANSFERS 2025-2026",
+    "title": "Transfer News recap - Arsenal 'advance' talks for Gyokeres, Duran returns to Europe",
+    "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/liveevent.shtml",
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/01/image-ad378d88-efba-402c-bdb1-da635f25c897-85-2560-1440.jpeg"
+  },
+  {
     "league": "FOOTBALL",
     "title": "Caldentey knows what she 'has to do' to challenge Bonmati, Putellas for Ballon d'Or",
     "link": "https://www.tntsports.co.uk/football/arsenal-star-mariona-caldentey-aitana-bonmati_sto23199225/story.shtml",
@@ -39,7 +45,7 @@
     "league": "CLUB WORLD CUP",
     "title": "Mbappe fires Real Madrid past Dortmund to set up PSG showdown",
     "link": "https://www.tntsports.co.uk/football/club-world-cup/2025/live-real-madrid-borussia-dortmund_mtc1573542/live-commentary.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg):focal(2559x1441:2561x1439)/origin-imgresizer.tntsports.io/2025/07/05/image-eb7c8887-af86-4fa3-9be4-394ba9144940-85-2560-1440.jpeg"
+    "pic": null
   },
   {
     "league": "EURO",
@@ -51,12 +57,6 @@
     "league": "FOOTBALL",
     "title": "Courtois labelled 'best goalkeeper in the world' after last-gasp save against Dortmund",
     "link": "https://www.tntsports.co.uk/football/thibaut-courtois-best-goalkeeper-world-real-madrid-borussia-dortmund-club-world-cup_sto23199062/story.shtml",
-    "pic": null
-  },
-  {
-    "league": "EURO",
-    "title": "England begin Euro title defence with loss to France",
-    "link": "https://www.tntsports.co.uk/football/euro/2025/live-france-england_mtc1574267/live-commentary.shtml",
     "pic": null
   }
 ]
