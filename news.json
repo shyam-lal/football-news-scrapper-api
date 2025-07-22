@@ -12,6 +12,12 @@
     "pic": "https://imgresizer.tntsports.io/unsafe/72x72/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/21/image-21503d91-20bb-4dfa-be6f-30fc1d5b248a-68-310-310.jpeg"
   },
   {
+    "league": "FOOTBALL",
+    "title": "TNT Sports launches new campaign to kick off new football season: This is Not Normal",
+    "link": "https://www.tntsports.co.uk/football/new-football-season-tnt-sports_sto23204062/story.shtml",
+    "pic": "https://imgresizer.tntsports.io/unsafe/72x72/filters:format(jpeg):focal(142x74:144x72)/origin-imgresizer.tntsports.io/2025/07/21/image-b43736b1-1923-4721-857d-3e9fe3a1d231-68-310-310.jpeg"
+  },
+  {
     "league": "TRANSFERS",
     "title": "Liverpool agree deal to sign Ekitike from Frankfurt for up to £79m",
     "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/hugo-ekitike-liverpool-agree-deal-eintracht-frankfurt_sto23204097/story.shtml",
@@ -21,7 +27,7 @@
     "league": "TRANSFERS",
     "title": "Sell Jackson but keep Sanchez?! Fans vote on future of Chelsea squad",
     "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/sell-nicolas-jackson-keep-robert-sanchez-chelsea-squad-voting_sto23204111/story.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/72x72/filters:format(png):focal(160x78:162x76)/origin-imgresizer.tntsports.io/2025/07/21/image-c7c53f7d-daba-47e2-82ff-f45ba572828f-68-310-310.png"
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(png):focal(1308x360:1310x358)/origin-imgresizer.tntsports.io/2025/07/21/image-c7c53f7d-daba-47e2-82ff-f45ba572828f-85-2560-1440.png"
   },
   {
     "league": "PREMIER LEAGUE",
@@ -39,7 +45,7 @@
     "league": "EURO",
     "title": "England want to 'send a message to the world' in response to Carter abuse - Wiegman",
     "link": "https://www.tntsports.co.uk/football/euro/2025/england-jess-carter-abuse-sarina-wiegman_sto23204226/story.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/21/image-ad787c53-af3a-4273-b9f4-4d10136b1598-85-2560-1440.jpeg"
+    "pic": null
   },
   {
     "league": "PREMIER LEAGUE",
@@ -51,12 +57,6 @@
     "league": "TRANSFERS 2025-2026",
     "title": "Transfer News recap - Liverpool agree Ekitike deal, Rashford has Barca medical",
     "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/liveevent.shtml",
-    "pic": null
-  },
-  {
-    "league": "TRANSFERS",
-    "title": "Man Utd could land Jackson in shock summer transfer - Paper Round",
-    "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/manchester-united-could-land-chelsea-striker-nicolas-jackson-in-shock-summer-move-paper-round_sto23203968/story.shtml",
     "pic": null
   }
 ]
