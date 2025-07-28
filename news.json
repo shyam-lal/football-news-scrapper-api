@@ -1,11 +1,5 @@
 [
   {
-    "league": "BALLON D’OR",
-    "title": "The startling Ballon d'Or fact in Real Madrid's squad that has not happened in 25 years",
-    "link": "https://www.tntsports.co.uk/football/ballon-d-or/2025/real-madrid-25-years-squad-luka-modric-karim-benzema-cristiano-ronaldo-luis-figo_sto23206419/story.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/72x72/filters:format(jpeg):focal(158x104:160x102)/origin-imgresizer.tntsports.io/2025/07/28/image-cc13752f-f624-427a-a0dd-9121f25a2728-68-310-310.jpeg"
-  },
-  {
     "league": "EURO",
     "title": "'Crazy mentality' - Wiegman hails Bronze after defender plays through Euro 2025 with fractured tibia",
     "link": "https://www.tntsports.co.uk/football/euro/2025/crazy-mentality-england-coach-sarina-wiegman-hails-lucy-bronze-after-defender-plays-through-european-championship-with-fractured-tibia_sto23206230/story.shtml",
@@ -27,7 +21,7 @@
     "league": "EURO",
     "title": "Glory for Lionesses as Hampton heroics seal historic shoot-out final victory",
     "link": "https://www.tntsports.co.uk/football/euro/2025/live-england-spain_mtc1574274/live-commentary.shtml",
-    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/27/image-0638875f-1f54-4d88-92f0-9c32060a1eef-85-2560-1440.jpeg"
+    "pic": "https://imgresizer.tntsports.io/unsafe/72x72/filters:format(jpeg)/origin-imgresizer.tntsports.io/2025/07/27/image-0638875f-1f54-4d88-92f0-9c32060a1eef-68-310-310.jpeg"
   },
   {
     "league": "EURO",
@@ -43,20 +37,26 @@
   },
   {
     "league": "EURO",
-    "title": "Wiegman's record in finals after England's penalty triumph over Spain",
-    "link": "https://www.tntsports.co.uk/football/euro/2025/england-spain-lionesses-final-sarina-wiegman-record-world-cup_sto23205463/story.shtml",
-    "pic": null
+    "title": "Four England players make team of the tournament after Euros triumph",
+    "link": "https://www.tntsports.co.uk/football/euro/2025/uefa-team-of-the-tournament-england-hannah-hampton-alessia-russo-lucy-bronze-chloe-kelly_sto23206474/story.shtml",
+    "pic": "https://imgresizer.tntsports.io/unsafe/420x0/filters:format(jpeg):focal(1176x279:1178x277)/origin-imgresizer.tntsports.io/2025/07/28/image-64049623-dc6a-4ebf-a384-1fb299589379-85-2560-1440.jpeg"
   },
   {
     "league": "TRANSFERS",
-    "title": "Newcastle braced for formal offer from Liverpool for Isak - Paper Round",
-    "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/newcastle-united-braced-for-formal-offer-from-liverpool-for-forward-alexander-isak-paper-round_sto23206171/story.shtml",
+    "title": "Real preparing Vinicius sale, clubs on red alert for Donnarumma - Euro Transfer News",
+    "link": "https://www.tntsports.co.uk/football/transfers/2025-2026/real-madrid-preparing-vinicius-junior_sto23206440/story.shtml",
     "pic": null
   },
   {
-    "league": "PREMIER LEAGUE",
-    "title": "Amorim lauds ‘leader’ Fernandes after connection with Cunha inspires pre-season win",
-    "link": "https://www.tntsports.co.uk/football/premier-league/2025-2026/man-utd-bruno-fernandes-west-ham-pre-season-ruben-amorim-matheus-cunha_sto23205973/story.shtml",
+    "league": "BALLON D’OR",
+    "title": "The startling Ballon d'Or fact in Real Madrid's squad that has not happened in 25 years",
+    "link": "https://www.tntsports.co.uk/football/ballon-d-or/2025/real-madrid-25-years-squad-luka-modric-karim-benzema-cristiano-ronaldo-luis-figo_sto23206419/story.shtml",
+    "pic": null
+  },
+  {
+    "league": "EURO",
+    "title": "Wiegman's record in finals after England's penalty triumph over Spain",
+    "link": "https://www.tntsports.co.uk/football/euro/2025/england-spain-lionesses-final-sarina-wiegman-record-world-cup_sto23205463/story.shtml",
     "pic": null
   }
 ]
